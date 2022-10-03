@@ -1,0 +1,131 @@
+{
+  "home": [
+    {
+      "id": 1,
+      "img": "https://i.postimg.cc/nVD809wq/homepage.jpg",
+      "title": "Create your Space",
+      "text": "investing in good interior design adds value in the long run. An interior designer is well aware of the types of fixtures, lighting, drapes, paint, sofa designs and carpeting that you should put in various parts of a house"
+    },
+    {
+      "id": 2,
+      "img": "https://i.postimg.cc/ZnGvPvnT/homepage1.jpg",
+      "title": "Create your Space",
+      "text": "investing in good interior design adds value in the long run. An interior designer is well aware of the types of fixtures, lighting, drapes, paint, sofa designs and carpeting that you should put in various parts of a house"
+    },
+    {
+      "id": 3,
+      "img": "https://i.postimg.cc/9Qjqr9sb/homepage2.jpg",
+      "title": "Create your Space",
+      "text": "investing in good interior design adds value in the long run. An interior designer is well aware of the types of fixtures, lighting, drapes, paint, sofa designs and carpeting that you should put in various parts of a house"
+    },
+    {
+      "id": 4,
+      "img": "https://i.postimg.cc/PqSL3RJV/homepage3.jpg",
+      "title": "Create your Space",
+      "text": "investing in good interior design adds value in the long run. An interior designer is well aware of the types of fixtures, lighting, drapes, paint, sofa designs and carpeting that you should put in various parts of a house"
+    }
+  ],
+  "about": [
+    {
+      "id": 1,
+      "image": "https://i.postimg.cc/7hrygS0P/about.jpg",
+      "text": "our team works every day to develop every detail in the interior? ocerall layout and movement paths based on spatial strategies and interactive elements . the design is functional and at the same time very unusual",
+      "img_url": "https://i.postimg.cc/prKkFFJH/about1.jpg"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "text": "1 RESIDENTIAL DESIGN",
+      "image": "https://i.postimg.cc/6q07GWg3/services-RE.jpg",
+      "description": "our specialists create geometrically correct and even surface, mostly without frills and additional accessories. the main task is not clutter up the room . the furniture set is limited to the ost functional and necessary sets",
+      "img_url": "https://i.postimg.cc/KYwtZYhh/services-R.jpg"
+    },
+    {
+      "id": 2,
+      "text": "2 TURNKEY DESIGN",
+      "image": "https://i.postimg.cc/K8gqSjWB/services-T.jpg",
+      "description": "",
+      "img_url": "https://i.postimg.cc/mrsSvwCW/services-TUR.jpg"
+    },
+    {
+      "id": 3,
+      "text": "2 INTERIOR DESIGN FOR BUSINESS",
+      "image": "https://i.postimg.cc/xj4V9Dcy/services-O.jpg",
+      "description": "We develop projects of any compexity. Only high-quality materials with service life and wear resistance are used in the manufacture. The main featureismobility, so seamless inflatable furniture is very common, which is quitesimply transformed and move.",
+      "img_url": "https://i.postimg.cc/VLCp1Sym/services-OFF.jpg"
+    }
+  ],
+  "project": {
+    "kitchen": [
+      {
+        "id": 1,
+        "image": "https://i.postimg.cc/B6VpV10r/kitchen.jpg",
+        "text": ""
+      },
+      {
+        "id": 2,
+        "image": "https://i.postimg.cc/wxRnd9GX/kitchen1.jpg",
+        "text": ""
+      },
+      {
+        "id": 3,
+        "image": "https://i.postimg.cc/MZB3Fdnt/kitchen2.jpg",
+        "text": ""
+      }
+    ],
+    "bedroom": [
+      {
+        "id": 1,
+        "image": "https://i.postimg.cc/ryb0KNg6/bedroom.jpg",
+        "text": ""
+      },
+      {
+        "id": 2,
+        "image": "https://i.postimg.cc/sgPvHdzy/bedroom1.jpg",
+        "text": ""
+      }
+    ],
+    "office": [
+      {
+        "id": 1,
+        "image": "https://i.postimg.cc/BnZXz7nK/office.jpg",
+        "text": ""
+      },
+      {
+        "id": 2,
+        "image": "https://i.postimg.cc/sfpxgCBW/office1.jpg",
+        "text": ""
+      }
+    ],
+    "livingroom": [
+      {
+        "id": 1,
+        "image": "https://i.postimg.cc/vZyNw9J9/livingroom.jpg",
+        "text": ""
+      },
+      {
+        "id": 2,
+        "image": "https://i.postimg.cc/L4ZCqNRL/livingroom1.jpg",
+        "text": ""
+      },
+      {
+        "id": 3,
+        "image": "https://i.postimg.cc/yNkhM88c/livingroom2.jpg",
+        "text": ""
+      }
+    ],
+    "bathroom": [
+      {
+        "id": 1,
+        "image": "https://i.postimg.cc/mgq1FNT1/bathroom.jpg",
+        "text": ""
+      },
+      {
+        "id": 2,
+        "image": "https://i.postimg.cc/0Q16VkM8/bathroom1.jpg",
+        "text": ""
+      }
+    ]
+  }
+}
