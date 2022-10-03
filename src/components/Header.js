@@ -1,28 +1,32 @@
 import React from 'react';
-import { Nav, NavLink, Bars,NavMenu } from './Nav';
+import { Nav, NavLink, Bars, NavMenu} from './Nav';
 
 const Header = () => {
   return (
     <>
       <Nav>
-        <NavLink to="/">home</NavLink>
+        <NavLink to="">
+          <h1>logo</h1>
+        </NavLink>
         <Bars />
         <NavMenu>
+          <NavLink to="/" activeStyle>
+            Home
+          </NavLink>
           <NavLink to="/about" activeStyle>
-            about
+            About
           </NavLink>
           <NavLink to="/services" activeStyle>
-            services
+            Services
           </NavLink>
           <NavLink to="/project" activeStyle>
-            project
+            Project
           </NavLink>
           <NavLink to="/contact" activeStyle>
-            contact
+            Contact
           </NavLink>
         </NavMenu>
       </Nav>
-      <div> hello </div>
     </>
   );
 }
