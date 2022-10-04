@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Nav, NavLink, Bars, NavMenu} from './Nav';
 
 const Header = () => {
+  const [bg, setBg] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      return window.scrollY > 50 ? setBg(true) : setBg(false);
+    });
+  });
   return (
-    <>
+    <header
+      className={`${
+        bg ? "bg-tertiary h-20" : "h-24"
+      } flex items-center fixed top-0 w-full text-white z-10 transition-all duration-300`}
+    >
       <Nav>
         <NavLink to="">
           <h1>logo</h1>
@@ -27,7 +38,7 @@ const Header = () => {
           </NavLink>
         </NavMenu>
       </Nav>
-    </>
+    </header>
   );
 }
 
