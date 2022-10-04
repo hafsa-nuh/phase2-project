@@ -3,7 +3,6 @@ import Main from '../components/Main'
 
 
 const Home = () => {
-   const [index, setIndex] = useState(0)
 
   const slides =[ 
     {
@@ -31,8 +30,6 @@ const Home = () => {
       "text": "investing in good interior design adds value in the long run. An interior designer is well aware of the types of fixtures, lighting, drapes, paint, sofa designs and carpeting that you should put in various parts of a house"
     }
   ]
-
-  const {img, text, title} = slides[index]
 
 
   // const [content, setContent] = useState([]);

@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
 import styled from "styled-components";
+import {FaChevronLeft, FaChevronRight} from "react-icons/fa"
 
 const Background = styled.section`
-  width: 100%;
-  height: 100%;
-//   background: rgba(0, 0, 0, 0.8);
+  margin-right: 10px
   position: fixed;
   display: flex;
-//   justify-content: center;
-//   align-items: center;
+  // width: 100%;
+  // hight: 100%;
 `;
 const ModalWrapper = styled.div`
   width: 100%;
+  hight: 100%;
   background: #013220;
+  //   grey #404040 / #484848
+  //   blue #075264
   color: #000;
   position: relative;
   display: grid;
@@ -49,52 +51,75 @@ const ModalContent = styled.div`
   }
 `;
 
-
-
 const Main = ({slides}) => {
-    // console.log(content.content)
+    
+  const [index, setIndex] = useState(0);
+  const { img, text, title } = slides[index];
+    // console.log(index)
 
-    const [index , setIndex] = useState(0)
-    console.log(index)
-    // const { title, text, img} = obj[index]
+//  style for the div
+  const slider = {
+    marginLeft: "auto",
+    marginRight: "auto",
+  };
 
-
-    // const leftArrow ={
-    //     position: 'absolute',
-    //     top: '50%',
-    //     transform: 'translate(0, -50%)',
-    //     left: '32px',
-    //     fontSize: '45px',
-    //     color: '#fff',
-    //     zIndex:1,
-    //     cursor: 'pointer',
-    // }
-
-    //   const rightArrow = {
-    //     position: "absolute",
-    //     top: "50%",
-    //     transform: "translate(0, -50%)",
-    //     right: "32px",
-    //     fontSize: "45px",
-    //     color: "#fff",
-    //     zIndex: 1,
-    //     cursor: "pointer",
-    //   };
-
+  // finctionally button next
+  const nextIndex = ()=>{
+    setIndex((currentIndex) => {
+      let newItem = currentIndex + 1;
+      return newItem;
+    });
+  }
+//   the prev button
+   const prevIndex = () => {
+     setIndex((currentIndex) => {
+       let newItem = currentIndex - 1;
+       return newItem;
+     });
+   };
+  
   return (
     <>
-      {/* <Background> */}
-      {/* <div style={leftArrow}>❰</div>
-      <div style={rightArrow}>❱</div> */}
-      <ModalWrapper>
-        <ModalContent>
-          <h1>{slides[index].title}</h1>
-          <p>{slides[index].text}</p>
-        </ModalContent>
-        <ModalImg src={slides[index].img} alt="oh it worked" />
-      </ModalWrapper>
-      <br />
-      {/* </Background> */}
+      <Background>
+        <ModalWrapper>
+          <ModalContent>
+            <h1>{title}</h1>
+            <p>{text}</p>
+          </ModalContent>
+          <ModalImg src={img} alt="oh it worked" />
+          <div style={slider}>
+            <button
+              style={{
+                color: " white",
+                fontSize: "1.35rem",
+                background: "transparent",
+                borderColor: "transparent",
+                margin: "0 5rem",
+                transition: "var(--transition)",
+                cursor: "pointer",
+              }}
+              onClick={prevIndex}
+            >
+              <FaChevronLeft />
+            </button>
+            <button
+              style={{
+                color: " white",
+                fontSize: "1.35rem",
+                background: "transparent",
+                borderColor: "transparent",
+                margin: "0 1rem",
+                transition: "var(--transition)",
+                cursor: "pointer",
+              }}
+              onClick={nextIndex}
+            >
+              <FaChevronRight />
+            </button>
+          </div>
+        </ModalWrapper>
+        <br />
+      </Background>
     </>
   );
 }
