@@ -26,7 +26,7 @@ const ModalWrapper = styled.div`
 const ModalImg = styled.img`
   width: 100%;
   height: 100%;
-  border-radius: 20px;
+  border-radius:0 20px 20px 0;
   background: #000;
 `;
 
@@ -52,32 +52,42 @@ const ModalContent = styled.div`
 `;
 
 const Main = ({slides}) => {
-    
   const [index, setIndex] = useState(0);
   const { img, text, title } = slides[index];
-    // console.log(index)
+  // console.log(index)
 
-//  style for the div
+  //  style for the div
   const slider = {
     marginLeft: "auto",
     marginRight: "auto",
   };
 
+  // function to fix the number greater than my array
+  const checkNumber = (number) => {
+    if (number > slides.length - 1) {
+      return 0;
+    }
+    if (number < 0) {
+      return slides.length - 1;
+    }
+    return number;
+  };
+
   // finctionally button next
-  const nextIndex = ()=>{
+  const nextIndex = () => {
     setIndex((currentIndex) => {
       let newItem = currentIndex + 1;
-      return newItem;
+      return checkNumber(newItem);
     });
-  }
-//   the prev button
-   const prevIndex = () => {
-     setIndex((currentIndex) => {
-       let newItem = currentIndex - 1;
-       return newItem;
-     });
-   };
-  
+  };
+  //   the prev button
+  const prevIndex = () => {
+    setIndex((currentIndex) => {
+      let newItem = currentIndex - 1;
+      return checkNumber(newItem);
+    });
+  };
+
   return (
     <>
       <Background>

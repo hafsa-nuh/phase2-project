@@ -19,7 +19,6 @@ function App() {
         <Route path="/project" element={<Project />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-      <h1> HELLO WORLD</h1>
     </>
   );
 }
