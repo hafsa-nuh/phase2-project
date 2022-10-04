@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from "styled-components";
 
-const Background = styled.main`
+const Background = styled.section`
   width: 100%;
   height: 100%;
 //   background: rgba(0, 0, 0, 0.8);
@@ -10,24 +10,21 @@ const Background = styled.main`
 //   justify-content: center;
 //   align-items: center;
 `;
-const ModalWrapper = styled.section`
-    // width: 800px;
-    height: 500px;
+const ModalWrapper = styled.div`
   width: 100%;
-//   height: 100%;
   background: #013220;
   color: #000;
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   z-index: 10;
-  border-radius: 10px;
+  border-radius: 20px;
 `;
 
 const ModalImg = styled.img`
   width: 100%;
   height: 100%;
-  border-radius: 10px 0 0 10px;
+  border-radius: 20px;
   background: #000;
 `;
 
@@ -47,23 +44,58 @@ const ModalContent = styled.div`
   p {
     color: #fff;
     text-align: center;
-    padding:2px;
+    justify-content: center;
+    padding: 2px;
   }
 `;
 
 
 
-const Main = ({id, obj}) => {
+const Main = ({slides}) => {
+    // console.log(content.content)
+
+    const [index , setIndex] = useState(0)
+    console.log(index)
+    // const { title, text, img} = obj[index]
+
+
+    // const leftArrow ={
+    //     position: 'absolute',
+    //     top: '50%',
+    //     transform: 'translate(0, -50%)',
+    //     left: '32px',
+    //     fontSize: '45px',
+    //     color: '#fff',
+    //     zIndex:1,
+    //     cursor: 'pointer',
+    // }
+
+    //   const rightArrow = {
+    //     position: "absolute",
+    //     top: "50%",
+    //     transform: "translate(0, -50%)",
+    //     right: "32px",
+    //     fontSize: "45px",
+    //     color: "#fff",
+    //     zIndex: 1,
+    //     cursor: "pointer",
+    //   };
+
   return (
-    <Background>
+    <>
+      {/* <Background> */}
+      {/* <div style={leftArrow}>❰</div>
+      <div style={rightArrow}>❱</div> */}
       <ModalWrapper>
         <ModalContent>
-            <h1>{obj.title}</h1>
-            <p>{obj.text}</p>
+          <h1>{slides[index].title}</h1>
+          <p>{slides[index].text}</p>
         </ModalContent>
-      <ModalImg src={obj.img} alt="oh it worked"/>
+        <ModalImg src={slides[index].img} alt="oh it worked" />
       </ModalWrapper>
-    </Background>
+      <br />
+      {/* </Background> */}
+    </>
   );
 }
 
