@@ -11,7 +11,6 @@ function App() {
   
   return (
     <>
-    <div></div>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -20,6 +19,7 @@ function App() {
         <Route path="/project" element={<Project />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+    <div style={{height: '1000px'}} ></div>
     </>
   );
 }

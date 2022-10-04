@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from "styled-components";
 import {FaChevronLeft, FaChevronRight} from "react-icons/fa"
 
-const Background = styled.section`
+const Background = styled.main`
   margin-right: 10px
   position: fixed;
   display: flex;

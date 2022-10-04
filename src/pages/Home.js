@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Main from '../components/Main'
+import Header from '../components/Header';
 
 
 const Home = () => {
@@ -46,14 +47,14 @@ const Home = () => {
 
   return (
     <>
-    <main>
+    <header>
       <Main slides={slides}/>
       {/* <Main content={content[index]}  /> */}
       {/* {content} */}
     {/* {content.map((obj)=>
     <Main key={obj.id} obj={obj} />
     )} */}
-    </main>
+    </header>
     </>
   )
 }
